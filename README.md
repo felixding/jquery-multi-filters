@@ -10,4 +10,4 @@ jQuery Multi Filter (JMF) is a Javascript plugin for jQuery that mimics iTunes S
 [http://dingyu.me/portfolio/jquery-multi-filters](http://dingyu.me/portfolio/jquery-multi-filters)
 
 ### License
-JMF is licensed under the [MIT licensed](http://en.wikipedia.org/wiki/MIT_License).
+JMF is licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
