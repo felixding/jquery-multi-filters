@@ -1,3 +1,11 @@
+/*
+ * jQuery Multi Filters plugin v0.1
+ * http://dingyu.me/portfolio/jquery-multi-filters
+ * 
+ * by Felix Ding
+ *
+ * MIT License. 
+ */
 (function($) {
 	$.fn.multi_filters = function(options) {
 		var plugin = this;
@@ -70,12 +78,22 @@
               "value":"is"
             }
           ],
-          "value":[
-            1,
-            2,
-            3,
-            4,
-            5
+          "value":[ 
+            { "title" : "1 Star",
+              "value" : 1
+            },
+            { "title" : "2 Stars",
+              "value" : 2
+            },
+            { "title" : "3 Stars",
+              "value" : 3
+            },
+            { "title" : "4 Stars",
+              "value" : 4
+            },
+            { "title" : "5 Stars",
+              "value" : 5
+            }
           ]
         },
         "date":{
@@ -93,6 +111,29 @@
               "value":"is"
             }
           ]
+        },
+        "status":{
+          "restrictions":[
+            {
+              "title":"Is",
+              "value":"is"
+            },
+            {
+              "title":"Is Not",
+              "value":"is_not"
+            }
+          ],
+          "value":[ 
+            { "title" : "Open",
+              "value" : "open"
+            },
+            { "title" : "In Progress",
+              "value" : "in_progress"
+            },
+            { "title" : "Closed",
+              "value" : "closed"
+            }
+          ]
         }
       },
       templates: {
@@ -100,7 +141,7 @@
           <select class="key" name="model[filters][${id}][key]">{{tmpl(available_filters) "option"}}</select>\
           <select class="restriction" name="model[filters][${id}][restriction]"></select>\
           ${restrictions}\
-          <div class="value_container"></div>\
+          <span class="value_container"></span>\
           <button class="add-filter">+</button>\
           <button class="remove-filter">-</button>\
         </li>',

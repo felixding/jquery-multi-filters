@@ -1,0 +1,27 @@
+ul.filters {
+  border: 1px solid #ddd;
+  width: 454px;
+
+  li {
+    padding: 6px 10px;
+    border-bottom: 1px solid #ddd;
+
+    &:nth-child(odd) {
+      background: #eee;
+    }
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  select {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .value_container {
+    width: 140px;
+    display: inline-block;
+  }
+}
