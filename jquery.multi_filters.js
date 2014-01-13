@@ -1,5 +1,5 @@
 /*
- * jQuery Multi Filters plugin v0.1
+ * jQuery Multi Filters plugin v0.2
  * http://dingyu.me/portfolio/jquery-multi-filters
  * 
  * by Felix Ding
@@ -162,7 +162,7 @@
 		});
 		
 		// listen "filter key change"
-		$(plugin).find(".key").live("change", function() {
+		$(plugin).on("change", ".key", function() {
 		  var $filter = $(this).parent(".filter");
 		  var type = $(this).find("option:selected").tmplItem().data.type;
 		  
@@ -179,13 +179,13 @@
     plugin.dom.add_filter();
     
     // listen "add button"
-		$(plugin).find(".add-filter").live("click", function() {
+	  $(plugin).on("click", ".add-filter", function() {
 		  plugin.dom.add_filter(this);
 		  return false;
 		});
 		
 		// listen "remove button"
-		$(plugin).find(".remove-filter").live("click", function() {
+		$(plugin).on("click", ".remove-filter", function() {
 		  plugin.dom.remove_filter(this);
 		  return false;
 		});
