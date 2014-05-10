@@ -1,6 +1,5 @@
 ul.filters {
   border: 1px solid #ddd;
-  width: 454px;
   padding: 0;
   list-style: none;
 
@@ -17,13 +16,15 @@ ul.filters {
     }
   }
   
-  select {
-    width: 100px;
-    margin-right: 10px;
+  input {
+    min-width: 0;
   }
   
   .value_container {
-    width: 140px;
     display: inline-block;
+  }
+  
+  select {
+    margin: 5px 0;
   }
 }
